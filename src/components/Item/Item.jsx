@@ -29,7 +29,7 @@ export function Item({ emoji }) {
           setZoomed((wasZoomed) => !wasZoomed);
         }}
       >
-        {zoomed ? "Oddal" : "Przybliż"}
+        {zoomed ? "Zoom out" : "Zoom in"}
       </button>
     </li>
   );

@@ -19,8 +19,8 @@ const StyledListItem = styled(Item)`
 export function List() {
   return (
     <>
-      <button onClick={() => alert(`Liczba emoji: ${emojis.length}`)}>
-        Pokaż liczbę emoji
+      <button onClick={() => alert(`Number of emojis: ${emojis.length}`)}>
+        Show emoji count
       </button>
       <ul>
         {emojis.map((emoji) => (
