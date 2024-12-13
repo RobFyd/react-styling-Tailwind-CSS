@@ -14,22 +14,22 @@ const StyledEmoji = styled.span`
   display: block;
   margin-bottom: 42px;
   font-size: 32px;
-  transition: transform 0.3s;
-  ${({ $zoomed }) => $zoomed && "transform: scale(2)"}
+  transition: transform 0.8s;
+  ${({ $zoomed }) => $zoomed && "transform: scale(3)"}
 `;
 export function Item({ emoji, className }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <StyledItem>
-      <span>{emoji}</span>
-      <button
+    <StyledItem className={className}>
+      <StyledEmoji $zoomed={zoomed}>{emoji}</StyledEmoji>
+      <StyledButton
         onClick={() => {
           setZoomed((wasZoomed) => !wasZoomed);
         }}
       >
         {zoomed ? "Oddal" : "Przybliż"}
-      </button>
+      </StyledButton>
     </StyledItem>
   );
 }
