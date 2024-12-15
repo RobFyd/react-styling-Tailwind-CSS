@@ -5,10 +5,6 @@ import { StyledButton } from "../styles/StyledButton";
 const emojis = ["🚀", "🎶", "🎁", "🎉", "✨"];
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  gap: 30px;
   padding: 30px;
 `;
 
@@ -22,7 +18,7 @@ export function List() {
       <button onClick={() => alert(`Number of emojis: ${emojis.length}`)}>
         Show emoji count
       </button>
-      <ul>
+      <ul className="flex flex-col gap-8">
         {emojis.map((emoji) => (
           <Item key={emoji} emoji={emoji} />
         ))}
