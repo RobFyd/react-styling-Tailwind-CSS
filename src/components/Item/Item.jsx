@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { StyledButton } from "../styles/StyledButton";
 
 const StyledItem = styled.li`
   background: salmon;
