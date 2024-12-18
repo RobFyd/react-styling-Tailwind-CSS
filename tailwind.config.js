@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        salmon: "salmon",
+      },
       // gap: {
       //   30: "30px",
       // },
