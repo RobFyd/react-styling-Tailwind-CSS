@@ -1,29 +1,19 @@
 import { useState } from "react";
-import styled from "styled-components";
-
-const StyledItem = styled.li`
-  background: salmon;
-  padding: 30px 50px;
-  border-radius: 20px;
-  text-align: center;
-  overflow: hidden;
-`;
-
-const StyledEmoji = styled.span`
-  display: block;
-  margin-bottom: 42px;
-  font-size: 32px;
-  transition: transform 0.8s;
-  ${({ $zoomed }) => $zoomed && "transform: scale(3)"}
-`;
 
 export function Item({ emoji }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <li>
-      <span>{emoji}</span>
+    <li className="bg-salmon py-8 px-12 rounded-2xl text-center overflow-hidden">
+      <span
+        className={`block mb-10 text-3xl transition-transform ${
+          zoomed ? "scale-[3]" : ""
+        }`}
+      >
+        {emoji}
+      </span>
       <button
+        className={`bg-transparent border border-solid border-current p-3 rounded-[5px] cursor-pointer w-[120px] text-white transition-colors hover:text-salmon hover:bg-white`}
         onClick={() => {
           setZoomed((wasZoomed) => !wasZoomed);
         }}
