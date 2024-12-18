@@ -3,9 +3,17 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      gap: {
-        30: "30px",
-      },
+      // gap: {
+      //   30: "30px",
+      // },
+      // spacing: {
+      //   1: "5px",
+      //   2: "10px",
+      //   3: "15px",
+      //   4: "20px",
+      //   5: "25px",
+      //   6: "30px",
+      // },
     },
   },
   plugins: [],
