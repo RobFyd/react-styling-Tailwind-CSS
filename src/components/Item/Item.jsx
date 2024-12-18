@@ -4,16 +4,16 @@ export function Item({ emoji }) {
   const [zoomed, setZoomed] = useState(false);
 
   return (
-    <li className="bg-salmon py-8 px-12 rounded-2xl text-center overflow-hidden">
+    <li className="overflow-hidden rounded-2xl bg-salmon px-12 py-8 text-center">
       <span
-        className={`block mb-10 text-3xl transition-transform ${
+        className={`mb-10 block text-3xl transition-transform ${
           zoomed ? "scale-[3]" : ""
         }`}
       >
         {emoji}
       </span>
       <button
-        className={`bg-transparent border border-solid border-current p-3 rounded-[5px] cursor-pointer w-[120px] text-white transition-colors hover:text-salmon hover:bg-white`}
+        className={`w-[120px] cursor-pointer rounded-[5px] border border-solid border-current bg-transparent p-3 text-white transition-colors hover:bg-white hover:text-salmon`}
         onClick={() => {
           setZoomed((wasZoomed) => !wasZoomed);
         }}
